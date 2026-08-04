@@ -355,6 +355,85 @@ a:hover { text-decoration: underline; }
 .empty-state p { color: var(--ink-soft); max-width: 520px; }
 
 /* ============================================================
+   WRITING INDEX — article cards
+   ============================================================ */
+.article-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+.article-card .date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.article-card h2 { font-family: var(--font-display); font-size: 1.3rem; margin: 0 0 10px; }
+.article-card h2 a { color: var(--ink); }
+.article-card h2 a:hover { color: var(--indigo); text-decoration: none; }
+.article-card p { color: var(--ink-soft); margin: 0 0 14px; }
+.article-card .read-link { font-family: var(--font-mono); font-size: 0.82rem; }
+
+/* ============================================================
+   ARTICLE PAGE — long-form prose
+   ============================================================ */
+.article-back {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  display: inline-block;
+  margin: 40px 0 0;
+}
+
+.article-header { padding: 24px 0 32px; border-bottom: 1px solid var(--line); margin-bottom: 40px; }
+.article-header .date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.article-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.8vw, 2.6rem);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.article-body {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+.article-body p.lede {
+  font-size: 1.2rem;
+  color: var(--ink);
+  line-height: 1.55;
+  margin-bottom: 28px;
+}
+.article-body p { color: var(--ink-soft); margin: 0 0 20px; font-size: 1.05rem; }
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--ink);
+  margin: 44px 0 16px;
+}
+.article-body ul { color: var(--ink-soft); padding-left: 20px; margin: 0 0 20px; }
+.article-body li { margin-bottom: 10px; font-size: 1.05rem; }
+.article-body a { color: var(--indigo); }
+.article-body strong { color: var(--ink); }
+
+.article-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .site-footer {
