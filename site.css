@@ -26,11 +26,24 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
+/* styles.css's `.cmyk img:first-child{opacity:0}` targets the sizer image
+   in the OTHER .cmyk markup (a flat sizer + 4 plate <img> siblings). It's a
+   descendant selector, so it also zeroes the opacity of the single <img>
+   inside our `.cmyk .print` (single-image, compound-filter) markup, since
+   that img is likewise a first-child — just of .print, not of .cmyk
+   directly. Restore it here at higher specificity. */
+.cmyk .print img:first-child { opacity: 1; }
+
 .nav a[aria-current="page"] { font-weight: 600; }
 
-.page-container { max-width: 920px; margin: 0 auto; padding: 0 20px 120px; }
-.nav-container { max-width: 920px; margin: 0 auto; padding-top: 32px; padding-bottom: 32px; }
+.page-container { max-width: 1240px; margin: 0 auto; padding: 0 40px 120px; }
+.nav-container { max-width: 1240px; margin: 0 auto; padding: 32px 40px; }
 .footer-container {
-  max-width: 920px; margin: 0 auto; padding: 32px 20px 48px;
+  max-width: 1240px; margin: 0 auto; padding: 32px 40px 48px;
   font-size: 13px; opacity: 0.6; display: flex; gap: 8px; flex-wrap: wrap;
 }
+
+/* Card grids lay out in columns once the wider container gives them room,
+   instead of stacking full-height regardless of viewport width. */
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.grid-proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px; align-items: start; }
