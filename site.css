@@ -36,10 +36,10 @@ body {
 
 .nav a[aria-current="page"] { font-weight: 600; }
 
-.page-container { max-width: 1240px; margin: 0 auto; padding: 0 40px 120px; }
-.nav-container { max-width: 1240px; margin: 0 auto; padding: 32px 40px; }
+.page-container { max-width: 1440px; margin: 0 auto; padding: 0 40px 120px; }
+.nav-container { max-width: 1440px; margin: 0 auto; padding: 32px 40px; }
 .footer-container {
-  max-width: 1240px; margin: 0 auto; padding: 32px 40px 48px;
+  max-width: 1440px; margin: 0 auto; padding: 32px 40px 48px;
   font-size: 13px; opacity: 0.6; display: flex; gap: 8px; flex-wrap: wrap;
 }
 
