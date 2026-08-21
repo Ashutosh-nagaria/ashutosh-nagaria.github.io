@@ -1,79 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashutosh Nagaria · AI-Native Product Manager</title>
-<meta name="description" content="Ashutosh Nagaria builds AI-native enterprise products at scale. Employee Slate, People Finder AI Agent, Notification Engine.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashutosh Nagaria — Product Manager</title>
+<script src="site.js"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="wrap">
-    <a href="index.html" class="brand">Ashutosh Nagaria</a>
-    <ul class="nav-links">
-      <li><a href="work.html">Work</a></li>
-      <li><a href="writing.html">Writing</a></li>
-      <li><a href="build.html">Build</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="Ashutosh_Nagaria.pdf" class="resume-link" target="_blank">Resume ↓</a></li>
-    </ul>
-  </div>
+<nav class="nav nav-container">
+  <a class="nav-brand" href="index.html">Ashutosh Nagaria</a>
+  <a href="work.html">Work</a>
+  <a href="writing.html">Writing</a>
+  <a href="build.html">Build</a>
+  <a href="about.html">About</a>
+  <a href="https://ashutosh-nagaria.github.io/Ashutosh_Nagaria.pdf" target="_blank" rel="noopener">Resume ↓</a>
+  <button class="btn btn-icon btn-secondary" id="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">☾</button>
 </nav>
 
-<header class="hero">
-  <div class="wrap">
-    <p class="hero-eyebrow">Product Manager · AI-Native Enterprise Systems</p>
-    <h1>I build <span class="accent">AI-native enterprise products</span> at scale, from agents on knowledge graphs to eval frameworks with 90%+ accuracy gates.</h1>
-    <p class="sub">Currently shipping AI-native employee experience products. Previously scaled enterprise notification and feedback systems to hundreds of millions of monthly events.</p>
-    <div class="cta-row">
-      <a href="work.html" class="btn btn-primary">See the work</a>
-      <a href="about.html" class="btn btn-secondary">About me</a>
+<main class="page-container">
+
+  <section style="padding-top:20px;">
+    <div style="font-family:var(--font-body);font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:16px;">Product Manager · AI-Native Enterprise Systems</div>
+    <h1 style="font-size:48px;max-width:16ch;margin-bottom:24px;">I build AI-native enterprise products at scale, from agents on knowledge graphs to eval frameworks with 90%+ accuracy gates.</h1>
+    <p style="font-size:18px;max-width:56ch;opacity:0.85;margin-bottom:16px;">Currently shipping AI-native employee experience products. Previously scaled enterprise notification and feedback systems to hundreds of millions of monthly events.</p>
+    <div style="display:flex;gap:12px;margin-bottom:80px;">
+      <a class="btn btn-primary" href="work.html">See the work</a>
+      <a class="btn btn-secondary" href="about.html">About me</a>
     </div>
-  </div>
-</header>
 
-<section class="wrap">
-  <div class="proof-line">
-    <div class="track"></div>
-    <div class="proof-tiles">
+    <div style="display:grid;gap:48px;">
 
-      <div class="tile">
-        <div class="node-dot"></div>
-        <span class="stat">1M+ users</span>
-        <p class="label">Led 0→1 strategy for an AI-native employee portal to GA in 6 months, across 10 enterprise pilots and a 50+ Fortune 500 pipeline.</p>
-        <a href="work.html#employeeworks" class="evidence">See the project →</a>
-      </div>
+      <a href="work.html" style="text-decoration:none;color:inherit;display:grid;gap:6px;">
+        <span class="cmyk-num" style="font-size:56px;font-family:var(--font-heading);font-weight:var(--font-heading-weight);">
+          <span class="paper">1M+ users</span>
+          <span class="plate plate-c" aria-hidden="true">1M+ users</span>
+          <span class="plate plate-m" aria-hidden="true">1M+ users</span>
+          <span class="plate plate-y" aria-hidden="true">1M+ users</span>
+        </span>
+        <p style="margin:0;font-size:15px;opacity:0.8;max-width:60ch;">Led 0→1 strategy for an AI-native employee portal to GA in 6 months, across 10 enterprise pilots and a 50+ Fortune 500 pipeline. See the project →</p>
+      </a>
 
-      <div class="tile">
-        <div class="node-dot"></div>
-        <span class="stat">Knowledge Graph &gt; RAG</span>
-        <p class="label">Designed the People Finder AI Agent on text-to-Cypher over a knowledge graph, chosen over vector RAG for deterministic multi-hop traversal across matrixed orgs.</p>
-        <a href="work.html#employeeworks" class="evidence">See the reasoning →</a>
-      </div>
+      <a href="work.html" style="text-decoration:none;color:inherit;display:grid;gap:6px;">
+        <h3 style="margin:0;font-size:28px;color:var(--color-accent-700);">Knowledge Graph &gt; RAG</h3>
+        <p style="margin:0;font-size:15px;opacity:0.8;max-width:60ch;">Designed the People Finder AI Agent on text-to-Cypher over a knowledge graph, chosen over vector RAG for deterministic multi-hop traversal across matrixed orgs. See the reasoning →</p>
+      </a>
 
-      <div class="tile">
-        <div class="node-dot"></div>
-        <span class="stat">250M+ / month</span>
-        <p class="label">Scaled the Notification Engine from 0 to 5,000+ deployments in 15 months, reaching 95%+ adoption.</p>
-        <a href="work.html#notifications" class="evidence">See the project →</a>
-      </div>
+      <a href="work.html" style="text-decoration:none;color:inherit;display:grid;gap:6px;">
+        <span class="cmyk-num" style="font-size:56px;font-family:var(--font-heading);font-weight:var(--font-heading-weight);">
+          <span class="paper">250M+ / month</span>
+          <span class="plate plate-c" aria-hidden="true">250M+ / month</span>
+          <span class="plate plate-m" aria-hidden="true">250M+ / month</span>
+          <span class="plate plate-y" aria-hidden="true">250M+ / month</span>
+        </span>
+        <p style="margin:0;font-size:15px;opacity:0.8;max-width:60ch;">Scaled the Notification Engine from 0 to 5,000+ deployments in 15 months, reaching 95%+ adoption. See the project →</p>
+      </a>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 Ashutosh Nagaria</span>
-    <span>
-      <a href="https://linkedin.com/in/ashutosh-nagaria" target="_blank">LinkedIn</a> ·
-      <a href="mailto:anashutosh9@gmail.com">anashutosh9@gmail.com</a>
-    </span>
-  </div>
+</main>
+
+<footer class="footer-container">
+  <span>© 2026 Ashutosh Nagaria</span>
+  <span>·</span>
+  <a href="https://linkedin.com/in/ashutosh-nagaria" target="_blank" rel="noopener">LinkedIn</a>
+  <span>·</span>
+  <a href="mailto:anashutosh9@gmail.com">anashutosh9@gmail.com</a>
 </footer>
 
 </body>

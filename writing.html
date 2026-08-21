@@ -1,59 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Writing · Ashutosh Nagaria</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing — Ashutosh Nagaria</title>
+<script src="site.js"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="wrap">
-    <a href="index.html" class="brand">Ashutosh Nagaria</a>
-    <ul class="nav-links">
-      <li><a href="work.html">Work</a></li>
-      <li><a href="writing.html" class="active">Writing</a></li>
-      <li><a href="build.html">Build</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="Ashutosh_Nagaria.pdf" class="resume-link" target="_blank">Resume ↓</a></li>
-    </ul>
-  </div>
+<nav class="nav nav-container">
+  <a class="nav-brand" href="index.html">Ashutosh Nagaria</a>
+  <a href="work.html">Work</a>
+  <a href="writing.html" aria-current="page">Writing</a>
+  <a href="build.html">Build</a>
+  <a href="about.html">About</a>
+  <a href="https://ashutosh-nagaria.github.io/Ashutosh_Nagaria.pdf" target="_blank" rel="noopener">Resume ↓</a>
+  <button class="btn btn-icon btn-secondary" id="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">☾</button>
 </nav>
 
-<header class="page-header">
-  <div class="wrap">
-    <p class="eyebrow">Writing</p>
-    <h1>Articles on building AI-native products.</h1>
-    <p>Long-form pieces on the product and technical decisions behind what I've shipped, not summaries of what already happened.</p>
-  </div>
-</header>
+<main class="page-container">
 
-<section class="wrap">
-  <article class="article-card">
-    <p class="date">Start here</p>
-    <h2><a href="writing/about-me.html">About Me</a></h2>
-    <p>I build AI-native enterprise products, and I like proving the judgment behind them, not just the outcomes. Why I write, what I actually do, and what's coming next.</p>
-    <a href="writing/about-me.html" class="read-link">Read the article →</a>
-  </article>
+  <section style="padding-top:20px;">
+    <div style="font-family:var(--font-body);font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:8px;">Writing</div>
+    <h1 style="font-size:36px;max-width:20ch;margin-bottom:56px;">Notes on product and technical decisions.</h1>
 
-  <div class="empty-state">
-    <p class="eyebrow">In progress</p>
-    <h2>Next piece coming soon.</h2>
-    <p>I'm writing on decisions from the People Finder AI Agent and the Notification Engine work next. Check back, or see what's already public on <a href="https://linkedin.com/in/ashutosh-nagaria" target="_blank">LinkedIn</a> in the meantime.</p>
-  </div>
-</section>
+    <div style="display:grid;gap:20px;">
+      <a href="https://ashutosh-nagaria.github.io/writing/about-me.html" target="_blank" rel="noopener" class="card elev-sm" style="text-decoration:none;color:inherit;gap:10px;">
+        <div class="card-kicker">First article</div>
+        <div class="card-title" style="font-size:20px;">About Me</div>
+        <p class="card-body" style="font-size:14px;">I build AI-native enterprise products, and I like proving the judgment behind them, not just the outcomes.</p>
+      </a>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 Ashutosh Nagaria</span>
-    <span>
-      <a href="https://linkedin.com/in/ashutosh-nagaria" target="_blank">LinkedIn</a> ·
-      <a href="mailto:anashutosh9@gmail.com">anashutosh9@gmail.com</a>
-    </span>
-  </div>
+      <div class="card" style="gap:10px;opacity:0.55;background:transparent;border:1px dashed var(--color-divider);">
+        <div class="card-title" style="font-size:20px;">More incoming</div>
+        <p class="card-body" style="font-size:14px;">Writing on the decisions behind Paper Trail and the compliance-agent comparison, coming next.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer-container">
+  <span>© 2026 Ashutosh Nagaria</span>
+  <span>·</span>
+  <a href="https://linkedin.com/in/ashutosh-nagaria" target="_blank" rel="noopener">LinkedIn</a>
+  <span>·</span>
+  <a href="mailto:anashutosh9@gmail.com">anashutosh9@gmail.com</a>
 </footer>
 
 </body>

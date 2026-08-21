@@ -1,0 +1,36 @@
+/* Site-level layer on top of the Broadsheet design system (styles.css).
+   Maps --color-accent to a deep step of the system's own cyan ramp —
+   paragraph-size text in the bare --color-accent doesn't clear the
+   readme's contrast bar, so accent-700/800 stand in for body links and
+   buttons — and adds the light/dark ground, matched to the Broadsheet
+   defaults so light needs no override. */
+
+:root {
+  --color-accent: #006786;
+  --color-accent-600: #006786;
+  --color-accent-700: #004961;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #201e1d;
+  --color-surface: #2d2b2b;
+  --color-text: #f8f4f4;
+  --color-accent: #62c5ee;
+  --color-accent-600: #62c5ee;
+  --color-accent-700: #99e0ff;
+  --color-divider: color-mix(in srgb, #f8f4f4 18%, transparent);
+}
+
+body {
+  min-height: 100vh;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav a[aria-current="page"] { font-weight: 600; }
+
+.page-container { max-width: 920px; margin: 0 auto; padding: 0 20px 120px; }
+.nav-container { max-width: 920px; margin: 0 auto; padding-top: 32px; padding-bottom: 32px; }
+.footer-container {
+  max-width: 920px; margin: 0 auto; padding: 32px 20px 48px;
+  font-size: 13px; opacity: 0.6; display: flex; gap: 8px; flex-wrap: wrap;
+}

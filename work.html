@@ -1,74 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Work · Ashutosh Nagaria</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work — Ashutosh Nagaria</title>
+<script src="site.js"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<nav class="site-nav">
-<div class="wrap">
-<a href="index.html" class="brand">Ashutosh Nagaria</a>
-<ul class="nav-links">
-<li><a href="work.html" class="active">Work</a></li>
-<li><a href="writing.html">Writing</a></li>
-<li><a href="build.html">Build</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="Ashutosh_Nagaria.pdf" class="resume-link" target="_blank">Resume ↓</a></li>
-</ul>
-</div>
+
+<nav class="nav nav-container">
+  <a class="nav-brand" href="index.html">Ashutosh Nagaria</a>
+  <a href="work.html" aria-current="page">Work</a>
+  <a href="writing.html">Writing</a>
+  <a href="build.html">Build</a>
+  <a href="about.html">About</a>
+  <a href="https://ashutosh-nagaria.github.io/Ashutosh_Nagaria.pdf" target="_blank" rel="noopener">Resume ↓</a>
+  <button class="btn btn-icon btn-secondary" id="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">☾</button>
 </nav>
 
-<header class="page-header">
-<div class="wrap">
-<p class="eyebrow">Selected work</p>
-<h1>Three systems, three different kinds of scale.</h1>
-<p>One product built from zero, one system scaled past its original ceiling, and one channel expansion that shifted how customers actually used the platform.</p>
-</div>
-</header>
+<main class="page-container">
 
-<section class="wrap">
+  <section style="padding-top:20px;">
+    <div style="font-family:var(--font-body);font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:8px;">Selected work</div>
+    <h1 style="font-size:36px;max-width:20ch;margin-bottom:16px;">Three systems, three different kinds of scale.</h1>
+    <p style="font-size:17px;max-width:60ch;opacity:0.85;margin-bottom:64px;">One product built from zero, one system scaled past its original ceiling, and one channel expansion that shifted how customers actually used the platform.</p>
 
-<article class="project-card" id="employeeworks">
-<div class="scale">10 pilots · 1M+ users · 50+ Fortune 500 pipeline</div>
-<h2>Employee Slate / EmployeeWorks</h2>
-<p><strong>The situation.</strong> Enterprise employees navigate IT, HR, and Finance requests across disconnected tools. The brief was a single AI-native "front door" that could reason across all three, built from scratch inside a 6-month window to GA.</p>
-<p class="role"><strong>What I owned:</strong> discovery, PRDs, and backlog for the full 0→1 build, including the org chart, the profile page (backend and frontend), and the People Finder AI Agent end to end.</p>
-<p><strong>The hardest decision.</strong> For People Finder, I chose text-to-Cypher query generation over a knowledge graph instead of vector RAG. RAG is faster to stand up, but it can't reliably do deterministic multi-hop traversal across a matrixed org (who reports through whom, across which regional overlay). The graph approach cost more upfront modeling work but gave correct answers on structural questions RAG would have guessed at.</p>
-<p><strong>Outcome.</strong> GA in 6 months, 10 enterprise pilots, 1M+ end users, 50+ Fortune 500 accounts in pipeline, spanning healthcare, government, and industrial sectors.</p>
-<p><strong>What didn't work.</strong> An early AI triage agent prototype (Action Required Agent) was killed after testing showed prohibitive token consumption and infeasible technical constraints for the workflows it targeted. Cutting it early kept the team from over-investing in a direction that didn't hold up.</p>
-</article>
+    <article style="margin-bottom:72px;">
+      <div style="font-family:ui-monospace,monospace;font-size:13px;opacity:0.6;margin-bottom:8px;">10 pilots · 1M+ users · 50+ Fortune 500 pipeline</div>
+      <h2 style="font-size:26px;margin-bottom:20px;">Employee Slate / EmployeeWorks</h2>
+      <p style="margin-bottom:14px;"><strong>The situation.</strong> Enterprise employees navigate IT, HR, and Finance requests across disconnected tools. The brief was a single AI-native "front door" that could reason across all three, built from scratch inside a 6-month window to GA.</p>
+      <p style="margin-bottom:14px;"><strong>What I owned:</strong> discovery, PRDs, and backlog for the full 0→1 build, including the org chart, the profile page (backend and frontend), and the People Finder AI Agent end to end.</p>
+      <p style="margin-bottom:14px;"><strong>The hardest decision.</strong> For People Finder, I chose text-to-Cypher query generation over a knowledge graph instead of vector RAG. RAG is faster to stand up, but it can't reliably do deterministic multi-hop traversal across a matrixed org (who reports through whom, across which regional overlay). The graph approach cost more upfront modeling work but gave correct answers on structural questions RAG would have guessed at.</p>
+      <p style="margin-bottom:14px;"><strong>Outcome.</strong> GA in 6 months, 10 enterprise pilots, 1M+ end users, 50+ Fortune 500 accounts in pipeline. Early adopters included CVS Health, City of Raleigh, and Siemens Healthineers.</p>
+      <p style="margin:0;"><strong>What didn't work.</strong> An early AI triage agent prototype (Action Required Agent) was killed after testing showed prohibitive token consumption and infeasible technical constraints for the workflows it targeted. Cutting it early kept the team from over-investing in a direction that didn't hold up.</p>
+    </article>
 
-<article class="project-card" id="notifications">
-<div class="scale">0 → 5,000+ deployments in 15 months · 250M+ monthly · 95%+ adoption</div>
-<h2>Notification Engine</h2>
-<p><strong>The situation.</strong> A notification system with no meaningful deployment base needed to become the default, trusted channel across the platform, not just one more feature customers had to opt into.</p>
-<p class="role"><strong>What I owned:</strong> PRDs and user stories, and backlog prioritization across 6 releases, partnering directly with platform engineering on scale.</p>
-<p><strong>The hardest decision.</strong> Adoption only crossed 95% once notifications were pushed out-of-the-box as the default in a platform release, rather than left as an opt-in setting. Making that the plan meant accepting the support-load risk of a default no one asked for, in exchange for adoption that opt-in was never going to reach.</p>
-<p><strong>Outcome.</strong> Grew from 0 to 5,000+ deployments in 15 months, 250M+ monthly notifications, 95%+ adoption.</p>
-</article>
+    <article style="margin-bottom:72px;">
+      <div style="font-family:ui-monospace,monospace;font-size:13px;opacity:0.6;margin-bottom:8px;">0 → 5,000+ deployments in 15 months · 250M+ monthly · 95%+ adoption</div>
+      <h2 style="font-size:26px;margin-bottom:20px;">Notification Engine</h2>
+      <p style="margin-bottom:14px;"><strong>The situation.</strong> A notification system with no meaningful deployment base needed to become the default, trusted channel across the platform, not just one more feature customers had to opt into.</p>
+      <p style="margin-bottom:14px;"><strong>What I owned:</strong> PRDs and user stories, and backlog prioritization across 6 releases, partnering directly with platform engineering on scale.</p>
+      <p style="margin-bottom:14px;"><strong>The hardest decision.</strong> Adoption only crossed 95% once notifications were pushed out-of-the-box as the default in a platform release, rather than left as an opt-in setting. Making that the plan meant accepting the support-load risk of a default no one asked for, in exchange for adoption that opt-in was never going to reach.</p>
+      <p style="margin:0;"><strong>Outcome.</strong> Grew from 0 to 5,000+ deployments in 15 months, 250M+ monthly notifications, 95%+ adoption.</p>
+    </article>
 
-<article class="project-card">
-<div class="scale">500+ enterprise customers · 2.5M AI conversations in under a year</div>
-<h2>Omnichannel: Teams, Outlook, Now Mobile</h2>
-<p><strong>The situation.</strong> Employees were expected to leave their normal workflow tools to file a request or check a case, which suppressed usage. The system needed to meet people inside Teams and Outlook instead.</p>
-<p class="role"><strong>What I owned:</strong> the omnichannel delivery across Microsoft Teams, Outlook, and Now Mobile, alongside the Service Feedback and My Requests surfaces that fed into it.</p>
-<p><strong>Outcome.</strong> Scaled to 500+ enterprise customers. One large healthcare enterprise customer made Teams its primary channel, driving 2.5M AI conversations in under a year. My Requests adoption cut case-task volume from roughly 100/year (mostly high-priority) to roughly 10/year (mostly low-priority) within a year of rollout.</p>
-</article>
+    <article>
+      <div style="font-family:ui-monospace,monospace;font-size:13px;opacity:0.6;margin-bottom:8px;">500+ enterprise customers · 2.5M AI conversations in under a year</div>
+      <h2 style="font-size:26px;margin-bottom:20px;">Omnichannel: Teams, Outlook, Now Mobile</h2>
+      <p style="margin-bottom:14px;"><strong>The situation.</strong> Employees were expected to leave their normal workflow tools to file a request or check a case, which suppressed usage. The system needed to meet people inside Teams and Outlook instead.</p>
+      <p style="margin-bottom:14px;"><strong>What I owned:</strong> the omnichannel delivery across Microsoft Teams, Outlook, and Now Mobile, alongside the Service Feedback and My Requests surfaces that fed into it.</p>
+      <p style="margin:0;"><strong>Outcome.</strong> Scaled to 500+ enterprise customers. CVS Health made Teams its primary channel, driving 2.5M AI conversations in under a year. My Requests adoption cut case-task volume from roughly 100/year (mostly high-priority) to roughly 10/year (mostly low-priority) within a year of rollout.</p>
+    </article>
+  </section>
 
-</section>
+</main>
 
-<footer class="site-footer">
-<div class="wrap">
-<span>© 2026 Ashutosh Nagaria</span>
-<span>
-<a href="https://linkedin.com/in/ashutosh-nagaria" target="_blank">LinkedIn</a> ·
-<a href="mailto:anashutosh9@gmail.com">anashutosh9@gmail.com</a>
-</span>
-</div>
+<footer class="footer-container">
+  <span>© 2026 Ashutosh Nagaria</span>
+  <span>·</span>
+  <a href="https://linkedin.com/in/ashutosh-nagaria" target="_blank" rel="noopener">LinkedIn</a>
+  <span>·</span>
+  <a href="mailto:anashutosh9@gmail.com">anashutosh9@gmail.com</a>
 </footer>
 
 </body>

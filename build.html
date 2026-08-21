@@ -1,108 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Build · Ashutosh Nagaria</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build — Ashutosh Nagaria</title>
+<script src="site.js"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<nav class="site-nav">
-<div class="wrap">
-<a href="index.html" class="brand">Ashutosh Nagaria</a>
-<ul class="nav-links">
-<li><a href="work.html">Work</a></li>
-<li><a href="writing.html">Writing</a></li>
-<li><a href="build.html" class="active">Build</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="Ashutosh_Nagaria.pdf" class="resume-link" target="_blank">Resume ↓</a></li>
-</ul>
-</div>
+
+<nav class="nav nav-container">
+  <a class="nav-brand" href="index.html">Ashutosh Nagaria</a>
+  <a href="work.html">Work</a>
+  <a href="writing.html">Writing</a>
+  <a href="build.html" aria-current="page">Build</a>
+  <a href="about.html">About</a>
+  <a href="https://ashutosh-nagaria.github.io/Ashutosh_Nagaria.pdf" target="_blank" rel="noopener">Resume ↓</a>
+  <button class="btn btn-icon btn-secondary" id="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">☾</button>
 </nav>
 
-<header class="page-header">
-<div class="wrap">
-<p class="eyebrow">Build</p>
-<h1>Working repos, not demos.</h1>
-<p>These are learning builds, put together to actually understand the systems I write and think about, not production software. Each one ships with results, limitations, and what I'd do differently.</p>
-</div>
-</header>
+<main class="page-container">
 
-<section class="wrap">
+  <section style="padding-top:20px;">
+    <div style="font-family:var(--font-body);font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:8px;">Build</div>
+    <h1 style="font-size:36px;max-width:20ch;margin-bottom:16px;">Working repos, not demos.</h1>
+    <p style="font-size:17px;max-width:60ch;opacity:0.85;margin-bottom:56px;">These are learning builds, put together to actually understand the systems I write and think about, not production software. Each one ships with results, limitations, and what I'd do differently.</p>
 
-<div class="empty-state">
-<p class="eyebrow">Shipped</p>
-<h2>Paper Trail: permission-aware policy search</h2>
-<p>A Google Drive connector that indexes real documents, chunks and embeds them locally, and enforces zone- and role-based access control before retrieval happens, not after. Ask the same question as different personas and watch the answer, and the permission log, change in real time. Built to go deeper on the retrieval and access-control problems behind the People Finder AI Agent work.</p>
-<p>
-<a href="https://github.com/Ashutosh-nagaria/enterprise-policy-connector" target="_blank">Source</a> ·
-<a href="https://enterprise-policy-connector.streamlit.app/" target="_blank">Live demo</a>
-</p>
-</div>
+    <div style="display:grid;gap:20px;">
 
-<div class="empty-state">
-<p class="eyebrow">Shipped</p>
-<h2>DunderMifflin MCP Server</h2>
-<p>A Model Context Protocol server exposing permission-aware HR policy lookups as callable AI tools, with section-level role-based access control enforced at retrieval, not by hiding results after the fact. Backed by a 39-case automated eval suite (39/39 passing) and deployed publicly behind an API key.</p>
-<p>
-<a href="https://github.com/Ashutosh-nagaria/enterprise-policy-mcp" target="_blank">Source</a> ·
-<a href="https://enterprise-policy-mcp.onrender.com/mcp" target="_blank">Live server</a>
-</p>
-</div>
+      <div class="card elev-sm" style="gap:12px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="tag tag-accent">Live</span>
+          <span class="card-title" style="font-size:20px;">Paper Trail: permission-aware policy search</span>
+        </div>
+        <p class="card-body" style="font-size:14px;opacity:0.85;">A Google Drive connector that indexes real documents, chunks and embeds them locally, and enforces zone- and role-based access control before retrieval happens, not after. Proves access control enforced before retrieval, not after.</p>
+        <div style="display:flex;gap:16px;font-size:13px;">
+          <a href="https://github.com/Ashutosh-nagaria/enterprise-policy-connector" target="_blank" rel="noopener">Source</a>
+          <a href="https://enterprise-policy-connector.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
+        </div>
+      </div>
 
-</section>
+      <div class="card elev-sm" style="gap:12px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="tag tag-accent">Live</span>
+          <span class="card-title" style="font-size:20px;">cross-jurisdiction-compliance-agent</span>
+        </div>
+        <p class="card-body" style="font-size:14px;opacity:0.85;">Compares 3 AI agent architectures for compliance Q&amp;A across 5 jurisdictions, with cited statute answers. Proves judgment on when a rule-lookup beats a "smarter" AI system.</p>
+        <div style="display:flex;gap:16px;font-size:13px;">
+          <a href="https://github.com/Ashutosh-nagaria/cross-jurisdiction-compliance-agent" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
 
-<header class="page-header">
-<div class="wrap">
-<p class="eyebrow">Open source / proof of work</p>
-<h1>Five repos, five different questions answered.</h1>
-</div>
-</header>
+      <div class="card elev-sm" style="gap:12px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="tag tag-accent">Live</span>
+          <span class="card-title" style="font-size:20px;">voice-eval-dashboard</span>
+        </div>
+        <p class="card-body" style="font-size:14px;opacity:0.85;">Benchmarks ASR/TTS providers on WER, CER, MOS, and latency, translated into a use-case decision matrix. Proves benchmarking on real metrics, not vibes.</p>
+        <div style="display:flex;gap:16px;font-size:13px;">
+          <a href="https://github.com/Ashutosh-nagaria/voice-eval-dashboard" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
 
-<section class="wrap">
+    </div>
+  </section>
 
-<div class="empty-state">
-<p class="eyebrow">Repo</p>
-<h2><a href="https://github.com/Ashutosh-nagaria/cross-jurisdiction-compliance-agent" target="_blank">cross-jurisdiction-compliance-agent</a></h2>
-<p>Compared three AI agent architectures (RAG baseline, multi-step LangGraph agent, deterministic lookup) for compliance Q&amp;A across 5 jurisdictions, with a documented conclusion on which wins when.</p>
-</div>
+</main>
 
-<div class="empty-state">
-<p class="eyebrow">Repo</p>
-<h2><a href="https://github.com/Ashutosh-nagaria/enterprise-policy-mcp" target="_blank">enterprise-policy-mcp</a></h2>
-<p>MCP server with section-level role-based access control and a 39-case automated eval suite testing correctness and safety.</p>
-</div>
-
-<div class="empty-state">
-<p class="eyebrow">Repo</p>
-<h2><a href="https://github.com/Ashutosh-nagaria/enterprise-policy-connector" target="_blank">enterprise-policy-connector</a></h2>
-<p>Permission-aware RAG system with a live Google Drive connector, cost-optimized architecture, and audit logging.</p>
-</div>
-
-<div class="empty-state">
-<p class="eyebrow">Repo</p>
-<h2><a href="https://github.com/Ashutosh-nagaria/rag-to-production" target="_blank">rag-to-production</a></h2>
-<p>Full engineering lifecycle for an AI feature, local prototype through Docker, Kubernetes, and automated CI.</p>
-</div>
-
-<div class="empty-state">
-<p class="eyebrow">Repo</p>
-<h2><a href="https://github.com/Ashutosh-nagaria/pmos" target="_blank">pmos</a></h2>
-<p>A shipped, MIT-licensed tool that generates a personalized config file telling any AI assistant how you work as a PM.</p>
-</div>
-
-</section>
-
-<footer class="site-footer">
-<div class="wrap">
-<span>© 2026 Ashutosh Nagaria</span>
-<span>
-<a href="https://linkedin.com/in/ashutosh-nagaria" target="_blank">LinkedIn</a> ·
-<a href="mailto:anashutosh9@gmail.com">anashutosh9@gmail.com</a>
-</span>
-</div>
+<footer class="footer-container">
+  <span>© 2026 Ashutosh Nagaria</span>
+  <span>·</span>
+  <a href="https://linkedin.com/in/ashutosh-nagaria" target="_blank" rel="noopener">LinkedIn</a>
+  <span>·</span>
+  <a href="mailto:anashutosh9@gmail.com">anashutosh9@gmail.com</a>
 </footer>
 
 </body>
